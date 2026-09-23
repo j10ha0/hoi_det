@@ -1,0 +1,17 @@
+[testvideo1_short] split=train 帧=543 保留=543
+[testvideo2_short] split=val 帧=320 保留=320
+
+=== 统计 ===
+  keep_contact           851
+  keep_no_contact        12
+  keep_no_object         549
+  keep_object            314
+  keep_train             543
+  keep_val               320
+
+  总保留 863 帧
+  有接触 851 (98.6%)
+  有物体 314 (36.4%)
+  接触+物体都有: 314
+
+输出目录: /mnt/storage/siat_cjh/proj/EgoHOS_distill/data

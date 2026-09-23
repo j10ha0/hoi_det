@@ -1,0 +1,19 @@
+帧数: 863  输入尺寸: 224x224
+/mnt/storage/siat_cjh/proj/EgoHOS/mmsegmentation/mmseg/models/losses/cross_entropy_loss.py:235: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+load checkpoint from local path: /mnt/storage/siat_cjh/proj/EgoHOS/mmsegmentation/work_dirs/seg_twohands_ccda/best_mIoU_iter_56000.pth
+backbone: SwinTransformer
+backbone 输出: [(1, 128, 56, 56), (1, 256, 28, 28), (1, 512, 14, 14), (1, 1024, 7, 7)]
+  100/863
+  200/863
+  300/863
+  400/863
+  500/863
+  600/863
+  700/863
+  800/863
+
+保存 /mnt/storage/siat_cjh/proj/EgoHOS_distill/data/teacher_feat.npz  (561 MB)
+  stage2: (863, 256, 28, 28)
+  stage3: (863, 512, 14, 14)
+  stage4: (863, 1024, 7, 7)

@@ -1,0 +1,44 @@
+教师特征: key=stage3  863 帧, shape=(512, 14, 14)
+backbone=vit_small_patch16_224 | aux=True | distill=True
+train=543 val=320 size=(224, 224)
+类别权重（像素级）:
+  [mask_contact] pos_px=1541930 neg_px=279949270 → pos_weight=20.000 (已裁剪至 ≤20)
+  [mask_object] pos_px=2831532 neg_px=278659668 → pos_weight=20.000 (已裁剪至 ≤20)
+/home/siat_cjh/miniconda3/envs/AnyEMG/lib/python3.9/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/siat_cjh/miniconda3/envs/AnyEMG/lib/python3.9/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+参数量 23.41M
+损失平衡: manual  λ_contact=0.05 λ_object=0.05 λ_feat=0.1
+[  1/30] loss=0.9109 | hand F1=0.600 contact F1=0.060 object F1=0.060 (125s)
+[  2/30] loss=0.6113 | hand F1=0.646 contact F1=0.115 object F1=0.095 (129s)
+[  3/30] loss=0.5074 | hand F1=0.700 contact F1=0.143 object F1=0.135 (130s)
+[  4/30] loss=0.4350 | hand F1=0.728 contact F1=0.165 object F1=0.097 (128s)
+[  5/30] loss=0.3829 | hand F1=0.724 contact F1=0.143 object F1=0.202 (131s)
+[  6/30] loss=0.3372 | hand F1=0.735 contact F1=0.145 object F1=0.178 (130s)
+[  7/30] loss=0.3037 | hand F1=0.757 contact F1=0.147 object F1=0.173 (129s)
+[  8/30] loss=0.2787 | hand F1=0.720 contact F1=0.166 object F1=0.257 (127s)
+[  9/30] loss=0.2573 | hand F1=0.718 contact F1=0.186 object F1=0.241 (119s)
+[ 10/30] loss=0.2405 | hand F1=0.710 contact F1=0.186 object F1=0.251 (99s)
+[ 11/30] loss=0.2273 | hand F1=0.734 contact F1=0.196 object F1=0.183 (97s)
+[ 12/30] loss=0.2161 | hand F1=0.690 contact F1=0.175 object F1=0.249 (62s)
+[ 13/30] loss=0.2064 | hand F1=0.725 contact F1=0.192 object F1=0.216 (109s)
+[ 14/30] loss=0.1987 | hand F1=0.704 contact F1=0.187 object F1=0.207 (104s)
+[ 15/30] loss=0.1927 | hand F1=0.706 contact F1=0.185 object F1=0.234 (119s)
+[ 16/30] loss=0.1864 | hand F1=0.735 contact F1=0.178 object F1=0.211 (117s)
+[ 17/30] loss=0.1813 | hand F1=0.737 contact F1=0.203 object F1=0.212 (130s)
+[ 18/30] loss=0.1768 | hand F1=0.710 contact F1=0.201 object F1=0.213 (130s)
+[ 19/30] loss=0.1735 | hand F1=0.702 contact F1=0.194 object F1=0.237 (129s)
+[ 20/30] loss=0.1702 | hand F1=0.713 contact F1=0.202 object F1=0.233 (133s)
+[ 21/30] loss=0.1674 | hand F1=0.728 contact F1=0.200 object F1=0.195 (131s)
+[ 22/30] loss=0.1650 | hand F1=0.719 contact F1=0.196 object F1=0.179 (128s)
+[ 23/30] loss=0.1633 | hand F1=0.719 contact F1=0.200 object F1=0.212 (127s)
+[ 24/30] loss=0.1623 | hand F1=0.716 contact F1=0.199 object F1=0.210 (130s)
+[ 25/30] loss=0.1606 | hand F1=0.722 contact F1=0.198 object F1=0.143 (119s)
+[ 26/30] loss=0.1598 | hand F1=0.723 contact F1=0.199 object F1=0.161 (76s)
+[ 27/30] loss=0.1595 | hand F1=0.719 contact F1=0.198 object F1=0.150 (64s)
+[ 28/30] loss=0.1589 | hand F1=0.718 contact F1=0.198 object F1=0.140 (125s)
+[ 29/30] loss=0.1589 | hand F1=0.717 contact F1=0.199 object F1=0.147 (129s)
+[ 30/30] loss=0.1592 | hand F1=0.719 contact F1=0.199 object F1=0.138 (122s)
+
+最佳 hand F1 = 0.7571 → runs_v4/C3_l0.1/best.pt

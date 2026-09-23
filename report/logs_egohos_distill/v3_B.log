@@ -1,0 +1,43 @@
+backbone=vit_small_patch16_224 | aux=False | distill=False
+train=543 val=320 size=(224, 224)
+类别权重（像素级）:
+  [mask_contact] pos_px=1541930 neg_px=279949270 → pos_weight=20.000 (已裁剪至 ≤20)
+  [mask_object] pos_px=2831532 neg_px=278659668 → pos_weight=20.000 (已裁剪至 ≤20)
+/home/siat_cjh/miniconda3/envs/AnyEMG/lib/python3.9/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/siat_cjh/miniconda3/envs/AnyEMG/lib/python3.9/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+参数量 22.18M
+[  1/30] loss=0.5608 | hand F1=0.693 (30s)
+[  2/30] loss=0.3223 | hand F1=0.640 (19s)
+[  3/30] loss=0.2485 | hand F1=0.639 (28s)
+[  4/30] loss=0.2022 | hand F1=0.659 (23s)
+[  5/30] loss=0.1693 | hand F1=0.648 (20s)
+[  6/30] loss=0.1451 | hand F1=0.653 (16s)
+[  7/30] loss=0.1260 | hand F1=0.642 (19s)
+[  8/30] loss=0.1109 | hand F1=0.603 (16s)
+[  9/30] loss=0.0994 | hand F1=0.628 (38s)
+[ 10/30] loss=0.0904 | hand F1=0.605 (21s)
+[ 11/30] loss=0.0827 | hand F1=0.624 (36s)
+[ 12/30] loss=0.0767 | hand F1=0.620 (31s)
+[ 13/30] loss=0.0720 | hand F1=0.571 (39s)
+[ 14/30] loss=0.0681 | hand F1=0.534 (39s)
+[ 15/30] loss=0.0645 | hand F1=0.638 (17s)
+[ 16/30] loss=0.0618 | hand F1=0.582 (18s)
+[ 17/30] loss=0.0590 | hand F1=0.631 (39s)
+[ 18/30] loss=0.0570 | hand F1=0.551 (36s)
+[ 19/30] loss=0.0553 | hand F1=0.642 (18s)
+[ 20/30] loss=0.0538 | hand F1=0.616 (45s)
+[ 21/30] loss=0.0528 | hand F1=0.539 (30s)
+[ 22/30] loss=0.0518 | hand F1=0.575 (20s)
+[ 23/30] loss=0.0511 | hand F1=0.592 (33s)
+[ 24/30] loss=0.0504 | hand F1=0.576 (23s)
+[ 25/30] loss=0.0499 | hand F1=0.558 (38s)
+[ 26/30] loss=0.0495 | hand F1=0.579 (26s)
+[ 27/30] loss=0.0493 | hand F1=0.574 (34s)
+[ 28/30] loss=0.0491 | hand F1=0.573 (29s)
+[ 29/30] loss=0.0492 | hand F1=0.571 (19s)
+[ 30/30] loss=0.0490 | hand F1=0.577 (24s)
+
+最佳 hand F1 = 0.6928 → runs_v3/B_noaux/best.pt

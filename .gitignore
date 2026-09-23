@@ -1,0 +1,29 @@
+# ===== 模型权重（大文件，不入库）=====
+*.pt
+*.pth
+*.ckpt
+*.onnx
+weights/
+
+# ===== 视频（可从 HuggingFace 重新下载）=====
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ===== 大数据文件 =====
+*.parquet
+teacher_feat.npz
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ===== 编辑器 / 系统 =====
+.DS_Store
+.vscode/
+.idea/
+
+# ===== 密钥 / 环境 =====
+.env

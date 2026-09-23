@@ -1,0 +1,30 @@
+GPU: NVIDIA TITAN V
+torch 1.11.0+cu113 | CUDA 11.3
+输入图片: /mnt/storage/siat_cjh/proj/EgoHOS/testvideos/testvideo1_short/images/00000100.jpg
+
+[加载] twohands ...
+load checkpoint from local path: work_dirs/seg_twohands_ccda/best_mIoU_iter_56000.pth
+[加载] cb ...
+load checkpoint from local path: work_dirs/twohands_to_cb_ccda/best_mIoU_iter_76000.pth
+[加载] obj1 ...
+load checkpoint from local path: work_dirs/twohands_cb_to_obj1_ccda/best_mIoU_iter_34000.pth
+
+原始图片尺寸: (540, 960, 3)  (H, W, C)
+模型 test pipeline img_scale: (360, 480)  [keep_ratio=True]
+
+=== 端到端（含读图 + 预处理 + 后处理 + ONNX-free）===
+  twohands     60.6 ms  (  16.5 FPS)
+  cb           65.4 ms  (  15.3 FPS)
+  obj1         70.1 ms  (  14.3 FPS)
+  串联合计        196.1 ms  (   5.1 FPS)   峰值显存 1.71 GB
+
+=== 纯网络前向（无 I/O 开销）===
+  (跳过: KeyError: 'ori_filename')
+
+=== 输入尺寸对延迟的影响（twohands，端到端）===
+/mnt/storage/siat_cjh/proj/EgoHOS/mmsegmentation/mmseg/models/losses/cross_entropy_loss.py:235: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+  480x360:   63.2 ms ( 15.8 FPS)
+  960x540:   62.1 ms ( 16.1 FPS)
+  1280x720:   66.1 ms ( 15.1 FPS)
+  1920x1080:   78.2 ms ( 12.8 FPS)
